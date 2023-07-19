@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %} Inicio {% endblock %}
+{% block style %}{{ url_for('static', filename = 'css/inicio.css') }}{% endblock %}
+{% block js %}{{ url_for('static', filename = 'js/inicio.js') }}{% endblock %}
+
+{% block content %}
+
+<div class="principal">
+    <div class="contenedor1">
+        <div class="imgs-celu">
+            <img class="img-celus" src="{{ url_for('static', filename = 'img/cells.jpg') }}"/>
+        </div>
+        <div class="div-form">
+            <div class="formulario">
+                <img class="inst-title" src="{{ url_for('static', filename = 'img/inst-title.jpg') }}"/>
+                <form class="form-login" action="/" method="POST">
+                    <input class="input1" type="text" id="user" name="user" placeholder="Teléfono, usuario o correo electrónico" oninput="largo()">
+                    <input class="input1" type="password" id="password" name="password" placeholder="Contraseña" oninput="largo()">
+                    <button disabled class="submit1" type="submit" id="submit1">Entrar</button>
+                </form>
+                <p class="separ">________________ o ________________</p>
+                <div class="login-fb">
+                    <img class="icon-fb-login-btn" src="{{ url_for('static', filename = 'img/fb-icon-login.png') }}"/>
+                    <p class="ini-fb">Iniciar sesión con Facebook</p>
+                </div>
+                <p class="has-olv-pass">¿Has olvidado la contraseña?</p>
+            </div>
+            <div class="no-cuenta">
+                <div class="cont-no-cuenta-txts">
+                    <p class="pregunta">¿No tienes una cuenta?</p>
+                    <p class="regis">Regístrate</p>
+                </div>
+            </div>
+            <div class="desc-app">
+                <p class="desc-la-app">Descarga la aplicación.</p>
+                <div class="apps-btns">
+                    <img class="app-link" id="gp-app-link" src="{{ url_for('static', filename = 'img/google-play-app.png') }}" />
+                    <img class="app-link" src="{{ url_for('static', filename = 'img/micro-app.png') }}" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="txts-footer">
+            <p class="texto-foot">Meta</p>
+            <p class="texto-foot">Información</p>
+            <p class="texto-foot">Blog</p>
+            <p class="texto-foot">Empleo</p>
+            <p class="texto-foot">Ayuda</p>
+            <p class="texto-foot">API</p>
+            <p class="texto-foot">Privacidad</p>
+            <p class="texto-foot">Condiciones</p>
+            <p class="texto-foot">Cuentas destacadas</p>
+            <p class="texto-foot">Ubicaciones</p>
+            <p class="texto-foot">Instagram Lite</p>
+            <p class="texto-foot">Threads</p>
+            <p class="texto-foot">Subir contactos y personas no usuarias</p>
+            <p class="texto-foot">Meta Verified</p>
+        </div>
+        <div class="otros-txt-footer">
+            <p class="texto-foot">Español (España) ^</p>
+            <p class="texto-foot">© 2023 Instagram from Meta</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
